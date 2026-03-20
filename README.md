@@ -1,71 +1,213 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Vivian Zeller — Portfolio</title>
-  <link rel="stylesheet" href="Portfolio Page.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-</head>
 
-<body>
-  <header class="intro">
-    <img src="Images/Pfp.png">
-    <h1>Vivian Zeller</h1>
-    <p class="tagline">Design student focused on digital and visual communication</p>
-  </header>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  <main>
-    <section class="about">
-      <h2>About</h2>
-      <p>
-        I'm a sophomore student majoring in graphic design and minoring in marketing. I work as a Resident Assistant and enjoy drawing, video games, and learning languages in my spare time.
-      </p>
-    </section>
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  background: linear-gradient(135deg, #fff0f5, #fff5f8);
+  color: #1a1a1a;
+  line-height: 1.6;
+  padding: 60px 20px;
+  text-align: center;
+  transition: background 0.5s;
+}
 
-    <section class="interests">
-      <h2>Areas of Interest</h2>
-      <ul>
-        <li>Digital Design</li>
-        <li>Typography</li>
-        <li>Marketing</li>
-        <li>UI / UX</li>
-        <li>Illustration</li>
-        <li>Animation</li>
-        <li>Photography</li>
-        <li>Web Design</li>
-      </ul>
-    </section>
+header,
+main {
+  max-width: 900px;
+  margin: 0 auto;
+}
 
-    <section class="work">
-      <h2>Artwork</h2>
+section {
+  margin-top: 70px;
+  max-width: 620px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: transform 0.3s;
+}
 
-      <div class="project">
-        <img src="Images/Steven Universe.png" class="project-img" alt="Steven Universe">
-        <h3>Steven Universe</h3>
-        <p>A recreation of the Steven Universe house I designed a few years ago.</p>
-      </div>
+section:hover {
+  transform: translateY(-3px);
+}
 
-      <div class="project">
-        <img src="Images/Unfinished.png" class="project-img" alt="Unfinished Jinx">
-        <h3>Unfinished Jinx</h3>
-        <p>An unfinished drawing of Jinx. Hoping to finish it this semester!</p>
-      </div>
-    </section>
+h1, h2, h3, p {
+  font-family: 'Inter', Arial, sans-serif;
+}
 
-    <section class="influences">
-      <h2>Aesthetic & Influences</h2>
-      <p>I love designing in Illustrator and enjoy creating modernistic and cartoon/animated vector styles.</p>
-    </section>
-  </main>
+h1 {
+  font-size: 3rem;
+  color: #b03a5b;
+  text-shadow: 1px 1px 2px #f6c1cf;
+  transition: color 0.3s;
+}
 
-  <footer>
-    <p class="contact">
-      Email: <a href="mailto:vivimzeller@gmail.com">vivimzeller@gmail.com</a>
-    </p>
-    <p class="contact">
-      LinkedIn: <a href="https://www.linkedin.com/in/vivian-zeller-291156329/" target="_blank">linkedin.com/in/vivian-zeller</a>
-    </p>
-  </footer>
-</body>
+h1:hover {
+  color: #ff6699;
+}
+
+h2 {
+  font-size: 1.6rem;
+  margin-bottom: 24px;
+  color: #8f2f4a;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+h3 {
+  font-size: 1.1rem;
+  margin-top: 18px;
+  color: #7a2a45;
+}
+
+p {
+  color: #333;
+  margin: 0 auto;
+  font-weight: 400;
+}
+
+.intro {
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.intro img {
+  width: 340px;
+  height: 340px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #f6c1cf;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.intro img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.tagline {
+  font-size: 1.2rem;
+  color: #6b2a3c;
+  font-weight: 500;
+}
+
+.interests ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 14px;
+  margin: 10px auto 0;
+  max-width: 620px;
+  justify-items: center;
+}
+
+.interests li {
+  background-color: #fde3ea;
+  padding: 14px 18px;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
+}
+
+.interests li:hover {
+  transform: scale(1.1);
+  background-color: #ffccd9;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.work {
+  margin-top: 80px;
+}
+
+.project {
+  max-width: 620px;
+  margin: 0 auto 80px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+}
+
+.project-img {
+  width: 560px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.work .project:nth-of-type(2) .project-img {
+  width: 450px;
+  height: 550px;
+}
+
+.project p {
+  margin: 12px auto 0;
+  max-width: 520px;
+  color: #444;
+}
+
+.influences {
+  margin-top: 80px;
+}
+
+.influences p {
+  font-style: italic;
+  color: #5a2a37;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+footer {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.contact {
+  font-size: 0.85rem;
+  color: #6b2a3c;
+}
+
+a {
+  color: #b03a5b;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #ff6699;
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .intro img {
+    width: 300px;
+    height: 300px;
+  }
+
+  .project-img {
+    width: 90%;
+    height: auto;
+  }
+}
